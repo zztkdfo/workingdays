@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+
+  "git.ignoreLimitWarning": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n",
+  "search.followSymlinks": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
