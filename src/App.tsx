@@ -1,5 +1,10 @@
 const App = (): any => {
-  return <>hello world</>
+  return (
+    <>
+      Hello World
+      <div>Add Test</div>
+    </>
+  )
 }
 
 export default App
