@@ -24,3 +24,9 @@
 - prettier: 공통된 코딩 스타일 가이드에 초점을 맞추고 코드 품질을 위해 사용 합니다.
   - npm i -D eslint-config-prettier
   - npm i -D prettier
+
+# MATERIAL-UI 설치 - 디자인 framework
+  - Material-UI은 리액트 개발에서 쉽게 사용할 수 있는 UI Framework 입니다.
+  - https://material-ui.com/
+  - npm i @material-ui/core
+  - npm i @material-ui/icons

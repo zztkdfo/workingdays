@@ -1,10 +1,7 @@
+import ResponsiveDrawer from './components/ResponsiveDrawer'
+
 const App = (): any => {
-  return (
-    <>
-      Hello World
-      <div>Add Test</div>
-    </>
-  )
+  return <ResponsiveDrawer />
 }
 
 export default App
