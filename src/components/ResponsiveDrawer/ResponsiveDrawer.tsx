@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Divider from '@material-ui/core/Divider'
@@ -67,7 +67,7 @@ interface Props {
   window?: () => Window
 }
 
-export default function ResponsiveDrawer(props: Props) {
+export default function ResponsiveDrawer(props: Props): ReactElement {
   const { window } = props
   const classes = useStyles()
   const theme = useTheme()
