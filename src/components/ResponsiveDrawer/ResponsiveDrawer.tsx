@@ -1,19 +1,26 @@
 import React, { ReactElement } from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Divider from '@material-ui/core/Divider'
-import Drawer from '@material-ui/core/Drawer'
-import Hidden from '@material-ui/core/Hidden'
-import IconButton from '@material-ui/core/IconButton'
+import {
+  AppBar,
+  CssBaseline,
+  Divider,
+  Drawer,
+  Hidden,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+  Typography
+} from '@material-ui/core'
+
 import InboxIcon from '@material-ui/icons/MoveToInbox'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import MailIcon from '@material-ui/icons/Mail'
 import MenuIcon from '@material-ui/icons/Menu'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import DashboardIcon from '@material-ui/icons/Dashboard'
+import DateRangeIcon from '@material-ui/icons/DateRange'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
+import ScheduleIcon from '@material-ui/icons/Schedule'
+import NotificationImportantIcon from '@material-ui/icons/NotificationImportant'
 import {
   makeStyles,
   useTheme,
@@ -80,10 +87,16 @@ export default function ResponsiveDrawer(props: Props): ReactElement {
   const drawer = (
     <div>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['대시보드', '근무내역 조회'].map((text) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {text === '대시보드' ? (
+                <DashboardIcon />
+              ) : text === '근무내역 조회' ? (
+                <ScheduleIcon />
+              ) : (
+                <InboxIcon />
+              )}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -91,10 +104,18 @@ export default function ResponsiveDrawer(props: Props): ReactElement {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['근무계획', '문의하기', '공지사항'].map((text) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {text === '근무계획' ? (
+                <DateRangeIcon />
+              ) : text === '문의하기' ? (
+                <ContactMailIcon />
+              ) : text === '공지사항' ? (
+                <NotificationImportantIcon />
+              ) : (
+                <InboxIcon />
+              )}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
