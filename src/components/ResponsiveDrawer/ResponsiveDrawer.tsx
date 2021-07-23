@@ -2,32 +2,21 @@ import React, { ReactElement } from 'react'
 import {
   AppBar,
   CssBaseline,
-  Divider,
   Drawer,
   Hidden,
   IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Toolbar,
   Typography
 } from '@material-ui/core'
 
-import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MenuIcon from '@material-ui/icons/Menu'
-import DashboardIcon from '@material-ui/icons/Dashboard'
-import DateRangeIcon from '@material-ui/icons/DateRange'
-import ContactMailIcon from '@material-ui/icons/ContactMail'
-import ScheduleIcon from '@material-ui/icons/Schedule'
-import NotificationImportantIcon from '@material-ui/icons/NotificationImportant'
 import {
   makeStyles,
   useTheme,
   Theme,
   createStyles
 } from '@material-ui/core/styles'
-
+import Menu from '../Menu'
 const drawerWidth = 240
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -84,46 +73,6 @@ export default function ResponsiveDrawer(props: Props): ReactElement {
     setMobileOpen(!mobileOpen)
   }
 
-  const drawer = (
-    <div>
-      <List>
-        {['대시보드', '근무내역 조회'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {text === '대시보드' ? (
-                <DashboardIcon />
-              ) : text === '근무내역 조회' ? (
-                <ScheduleIcon />
-              ) : (
-                <InboxIcon />
-              )}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['근무계획', '문의하기', '공지사항'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {text === '근무계획' ? (
-                <DateRangeIcon />
-              ) : text === '문의하기' ? (
-                <ContactMailIcon />
-              ) : text === '공지사항' ? (
-                <NotificationImportantIcon />
-              ) : (
-                <InboxIcon />
-              )}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  )
-
   const container =
     window !== undefined ? () => window().document.body : undefined
 
@@ -162,7 +111,7 @@ export default function ResponsiveDrawer(props: Props): ReactElement {
               keepMounted: true // Better open performance on mobile.
             }}
           >
-            {drawer}
+            <Menu />
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
@@ -173,7 +122,7 @@ export default function ResponsiveDrawer(props: Props): ReactElement {
             variant="permanent"
             open
           >
-            {drawer}
+            <Menu />
           </Drawer>
         </Hidden>
       </nav>
