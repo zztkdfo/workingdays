@@ -2,7 +2,7 @@
 
 # Getting Started with Create React App
 
-- npx create-react-app workingdays --template typescript
+- npx create-react-app@4.0.1 workingdays --template typescript
 
 # 이슈
 
