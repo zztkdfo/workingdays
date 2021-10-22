@@ -26,8 +26,15 @@
   - npm i -D prettier
 
 # MATERIAL-UI 설치 - 디자인 framework
-  - Material-UI은 리액트 개발에서 쉽게 사용할 수 있는 UI Framework 입니다.
-  - https://material-ui.com/
-  - https://material-ui.com/components/material-icons/ (icon 리스트 검색용)
-  - npm i @material-ui/core
-  - npm i @material-ui/icons
+
+- Material-UI은 리액트 개발에서 쉽게 사용할 수 있는 UI Framework 입니다.
+- https://material-ui.com/
+- https://material-ui.com/components/material-icons/ (icon 리스트 검색용)
+- npm i @material-ui/core
+- npm i @material-ui/icons
+
+# Router
+
+- https://reactrouter.com/
+- npm i react-router-dom
+- npm i --save-dev @types/react-router-dom
