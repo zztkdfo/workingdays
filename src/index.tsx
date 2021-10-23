@@ -1,13 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { Container } from '@material-ui/core'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Container maxWidth="xl">
-      <App />
-    </Container>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

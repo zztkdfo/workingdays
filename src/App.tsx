@@ -1,19 +1,19 @@
 import { ReactElement } from 'react'
-import ResponsiveDrawer from './components/ResponsiveDrawer'
+import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import DashBoard from './pages/DashBoard'
 import WorkingDaysList from './pages/WorkingDaysList'
 import Inquiry from './pages/Inquiry'
 import WorkingDaysPlan from './pages/WorkingDaysPlan'
 import Info from './pages/Info'
+import './App.css'
 
 const App = (): ReactElement => {
   return (
     <Router>
-      <ResponsiveDrawer />
-
+      <NavBar />
       <Switch>
-        <Route exact path="/" component={DashBoard} />
+        <Route path="/" exact component={DashBoard} />
         <Route path="/dashboard" component={DashBoard} />
         <Route path="/list" component={WorkingDaysList} />
         <Route path="/inquiry" component={Inquiry} />
