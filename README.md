@@ -4,13 +4,21 @@
 
 - npx create-react-app@4.0.1 workingdays --template typescript
 
-# 이슈
+# 이슈/체크
 
 1. tscofig.json 오류 관련 수정
 
 - "jsx": "react-jsx"을 "react"로 변경
 - npm i typescript@4.0.5 -S
 - npm i --save @types/react @types/react-dom
+
+2. 토이 프로젝트 임으로 React에 유명한 material ui를 사용 하였지만 기존 사용 했던 antd 보다는 훨씬 작은 생태계로 판별
+
+3. momentjs에서 dayjs로 변경
+
+- momentjs는 javascript 대표 날짜 및 시간 라이브러리
+- 성능 및 용량이 dayjs가 훨씬 작음(파일의 크기 97% 절감)
+- momentjs의 모든 기능 dayjs 대체 가능
 
 # eslint, prettier, vscode setting
 
@@ -38,3 +46,20 @@
 - https://reactrouter.com/
 - npm i react-router-dom
 - npm i --save-dev @types/react-router-dom
+
+# chart library
+
+- yarn add react-chartjs-2 chart.js
+
+# datePicker
+
+- yarn add @material-ui/pickers
+
+# Peer Library
+
+- npm i -s @date-io/dayjs@1.x dayjs
+
+# dayjs
+
+- yarn add dayjs
+- yarn add @date-io/dayjs

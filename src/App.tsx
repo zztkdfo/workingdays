@@ -7,19 +7,22 @@ import Inquiry from './pages/Inquiry'
 import WorkingDaysPlan from './pages/WorkingDaysPlan'
 import Info from './pages/Info'
 import './App.css'
+import { Container } from '@material-ui/core'
 
 const App = (): ReactElement => {
   return (
     <Router>
       <NavBar />
-      <Switch>
-        <Route path="/" exact component={DashBoard} />
-        <Route path="/dashboard" component={DashBoard} />
-        <Route path="/list" component={WorkingDaysList} />
-        <Route path="/inquiry" component={Inquiry} />
-        <Route path="/plan" component={WorkingDaysPlan} />
-        <Route path="/info" component={Info} />
-      </Switch>
+      <Container maxWidth="lg">
+        <Switch>
+          <Route path="/" exact component={DashBoard} />
+          <Route path="/dashboard" component={DashBoard} />
+          <Route path="/list" component={WorkingDaysList} />
+          <Route path="/inquiry" component={Inquiry} />
+          <Route path="/plan" component={WorkingDaysPlan} />
+          <Route path="/info" component={Info} />
+        </Switch>
+      </Container>
     </Router>
   )
 }

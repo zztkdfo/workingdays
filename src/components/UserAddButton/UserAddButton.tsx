@@ -5,7 +5,7 @@ import './UserAddButton.css'
 export interface UserAddButtonProps {
   onClick?: () => void
 }
-function UserAddButton(props: UserAddButtonProps): ReactElement {
+function UserAddButton(): ReactElement {
   return (
     <>
       <Link to="signup">
